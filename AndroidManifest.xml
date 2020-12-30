@@ -26,6 +26,7 @@
         <activity
             android:name="org.lineageos.updater.UpdatesActivity"
             android:excludeFromRecents="true"
+            android:exported="true"
             android:label="@string/display_name"
             android:launchMode="singleTop">
             <intent-filter android:priority="1">
