@@ -1,7 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aicp.updater3"
     android:versionCode="1">
-    <uses-sdk android:targetSdkVersion="28" android:minSdkVersion="25"/>
 
     <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
