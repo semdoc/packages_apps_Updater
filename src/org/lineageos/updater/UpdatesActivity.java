@@ -243,13 +243,12 @@ public class UpdatesActivity extends UpdatesListActivity {
                 return true;
             }
             case R.id.menu_local_update: {
-/*                boolean hasPermission = PermissionsUtils.checkAndRequestPermissions(
+                boolean hasPermission = PermissionsUtils.checkAndRequestPermissions(
                       this, REQUIRED_STORAGE_PERMISSIONS,
                       STORAGE_PERMISSIONS_REQUEST_CODE);
                 if (hasPermission) {
                   performFileSearch();
-                }*/
-                performFileSearch();
+                }
                 return true;
             }
         }
