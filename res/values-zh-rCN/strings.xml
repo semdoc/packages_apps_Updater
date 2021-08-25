@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -54,6 +54,8 @@
     <string name="menu_export_update">导出更新</string>
     <string name="menu_show_changelog">显示更改日志</string>
     <string name="menu_local_update">选择文件...</string>
+    <string name="menu_update_recovery">更新恢复模式</string>
+    <string name="toast_forced_update_recovery">无法在此设备上禁用 Recovery 更新。</string>
     <string name="snack_updates_found">找到新的更新</string>
     <string name="snack_no_updates_found">没有找到新的更新</string>
     <string name="snack_updates_check_failed">更新检查失败，请检查您的网络连接并于稍后重试。</string>

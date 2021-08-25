@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -54,6 +54,8 @@
     <string name="menu_export_update">Экспорт обновления</string>
     <string name="menu_show_changelog">Показать изменения</string>
     <string name="menu_local_update">Выбрать файл...</string>
+    <string name="menu_update_recovery">Обновить Recovery</string>
+    <string name="toast_forced_update_recovery">Невозможно отключить обновления Recovery на этом устройстве.</string>
     <string name="snack_updates_found">Доступны новые обновления</string>
     <string name="snack_no_updates_found">Обновлений не найдено</string>
     <string name="snack_updates_check_failed">Не удалось выполнить поиск обновлений. Проверьте подключение к Интернету и повторите попытку позже.</string>

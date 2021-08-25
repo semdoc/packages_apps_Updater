@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -54,6 +54,8 @@
     <string name="menu_export_update">Güncellemeyi dışarı aktar</string>
     <string name="menu_show_changelog">Değişiklikleri göster</string>
     <string name="menu_local_update">Dosya seç ...</string>
+    <string name="menu_update_recovery">Kurtarma modunu güncelle</string>
+    <string name="toast_forced_update_recovery">Bu cihazda Kurtarma modu güncellemelerini devre dışı bırakmak imkansızdır.</string>
     <string name="snack_updates_found">Yeni güncellemeler bulundu</string>
     <string name="snack_no_updates_found">Yeni güncelleme yok</string>
     <string name="snack_updates_check_failed">Güncelleme kontrolü başarısız oldu. Lütfen internet bağlantınızı kontrol edin ve daha sonra tekrar deneyin.</string>
@@ -114,4 +116,7 @@
     <string name="new_updates_channel_title">Yeni güncellemeler</string>
     <string name="ongoing_channel_title">Devam eden indirmeler</string>
     <string name="update_failed_channel_title">Güncelleme başarısız oldu</string>
+    <string name="dialog_permissions_title">İzinler</string>
+    <string name="dialog_permissions_dismiss">Reddet</string>
+    <string name="dialog_permissions_ask">Tekrar sor</string>
 </resources>

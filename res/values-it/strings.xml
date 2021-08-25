@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -114,4 +114,7 @@
     <string name="new_updates_channel_title">Nuovi aggiornamenti</string>
     <string name="ongoing_channel_title">Download in corso</string>
     <string name="update_failed_channel_title">Aggiornamento fallito</string>
+    <string name="dialog_permissions_title">Autorizzazioni</string>
+    <string name="dialog_permissions_dismiss">Scarta</string>
+    <string name="dialog_permissions_ask">Chiedi di nuovo</string>
 </resources>

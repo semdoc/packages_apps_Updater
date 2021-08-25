@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -54,6 +54,8 @@
     <string name="menu_export_update">更新のエクスポート</string>
     <string name="menu_show_changelog">更新履歴を表示</string>
     <string name="menu_local_update">ファイルを選択...</string>
+    <string name="menu_update_recovery">リカバリーを更新</string>
+    <string name="toast_forced_update_recovery">この端末ではリカバリーのアップデートを無効にすることはできません。</string>
     <string name="snack_updates_found">更新が見つかりました</string>
     <string name="snack_no_updates_found">新しい更新はありません</string>
     <string name="snack_updates_check_failed">更新を確認できませんでした。インターネット接続を確認して、しばらくしてからもう一度お試し下さい。</string>
@@ -111,4 +113,7 @@
     <string name="new_updates_channel_title">新しいアップデート</string>
     <string name="ongoing_channel_title">実行中のダウンロード</string>
     <string name="update_failed_channel_title">アップデートに失敗しました</string>
+    <string name="dialog_permissions_title">権限</string>
+    <string name="dialog_permissions_dismiss">解除</string>
+    <string name="dialog_permissions_ask">次回も確認する</string>
 </resources>
