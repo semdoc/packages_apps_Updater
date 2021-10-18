@@ -600,24 +600,17 @@ public class UpdatesActivity extends UpdatesListActivity {
         localUpdate.setName(file.getName());
         localUpdate.setFileSize(file.length());
         localUpdate.setTimestamp(file.lastModified()/1000L);
-        localUpdate.setDownloadId(String.valueOf(new Date().getTime()/1000L));
+        localUpdate.setDownloadId(String.valueOf(file.lastModified()/1000L));
         localUpdate.setVersion("");
         localUpdate.setPersistentStatus(UpdateStatus.Persistent.LOCAL);
         localUpdate.setStatus(UpdateStatus.DOWNLOADED);
 
         Log.d(TAG, "Adding local updates");
         UpdaterController controller = mUpdaterService.getUpdaterController();
+
         boolean newUpdates = false;
-
-        List<UpdateInfo> updates = new ArrayList<>();
-        updates.add(localUpdate);
-        List<String> updatesOnline = new ArrayList<>();
-        for (UpdateInfo update : updates) {
-            newUpdates |= controller.addUpdate(update);
-            updatesOnline.add(0, update.getDownloadId());
-        }
-
-        controller.setUpdatesAvailableOnline(updatesOnline, false);
+        newUpdates |= controller.addLocalUpdate(localUpdate);
+        if (!newUpdates) return;
 
         controller.verifyUpdateAsync(localUpdate.getDownloadId());
         controller.notifyUpdateChange(localUpdate.getDownloadId());

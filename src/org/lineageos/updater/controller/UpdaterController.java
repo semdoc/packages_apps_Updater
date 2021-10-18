@@ -49,6 +49,7 @@ public class UpdaterController {
     public static final String EXTRA_DOWNLOAD_ID = "extra_download_id";
 
     private final String TAG = "UpdaterController";
+    private static final boolean DEBUG = false;
 
     private static UpdaterController sUpdaterController;
 
@@ -324,15 +325,29 @@ public class UpdaterController {
         return addUpdate(update, true);
     }
 
-    private boolean addUpdate(final UpdateInfo updateInfo, boolean availableOnline) {
-        Log.d(TAG, "Adding download: " + updateInfo.getDownloadId());
-        if(updateInfo.getPersistentStatus() == UpdateStatus.Persistent.LOCAL){
+    public boolean addLocalUpdate(UpdateInfo update) {
+        if (!mDownloads.containsKey(update.getDownloadId())) {
             for (DownloadEntry entry : mDownloads.values()) {
-                if(entry.mUpdate.getFile().getPath().equals(updateInfo.getFile().getPath())){
+                if(entry.mUpdate.getPersistentStatus() == UpdateStatus.Persistent.LOCAL
+                        && entry.mUpdate.getName().equals(update.getName())
+                        && entry.mUpdate.getFileSize() == update.getFileSize()) {
+                    Log.d(TAG, "Skipping local update " + update.getDownloadId() + " already added");
                     return false;
                 }
             }
+            Update localUpdate = new Update(update);
+            localUpdate.setAvailableOnline(false);
+            localUpdate.setDownloadUrl(update.getDownloadUrl());
+            mDownloads.put(localUpdate.getDownloadId(), new DownloadEntry(localUpdate));
+            Log.d(TAG, "Local update added: " + update.getDownloadId() + "\nwith path: " + update.getFile().getPath());
+            return true;
         }
+        Log.d(TAG, "Skipping local update " + update.getDownloadId() + " already added");
+        return false;
+    }
+
+    private boolean addUpdate(final UpdateInfo updateInfo, boolean availableOnline) {
+        Log.d(TAG, "Adding download: " + updateInfo.getDownloadId());
         if (mDownloads.containsKey(updateInfo.getDownloadId())) {
             Log.d(TAG, "Download (" + updateInfo.getDownloadId() + ") already added");
             Update updateAdded = mDownloads.get(updateInfo.getDownloadId()).mUpdate;
