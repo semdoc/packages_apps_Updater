@@ -55,6 +55,7 @@
     <string name="menu_show_changelog">Tampilkan catatan perubahan</string>
     <string name="menu_local_update">Pilih file ...</string>
     <string name="menu_update_recovery">Perbarui Recovery</string>
+    <string name="toast_forced_update_recovery">Tidak mungkin untuk menonaktifkan pembaruan Recovery di perangkat ini.</string>
     <string name="snack_updates_found">Pembaruan baru ditemukan</string>
     <string name="snack_no_updates_found">Tidak ada pembaruan baru yang ditemukan</string>
     <string name="snack_updates_check_failed">Pemeriksaan pembaruan gagal. Silakan periksa koneksi internet Anda dan coba lagi nanti.</string>
