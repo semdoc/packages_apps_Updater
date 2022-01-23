@@ -98,7 +98,7 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> secondi rimasti</item>
     </plurals>
     <plurals name="eta_minutes">
-        <item quantity="one">&lt;xliff: g id="count"&gt; minuti rimasti</item>
+        <item quantity="one">&lt;xliff: g id=\"count\"&gt; minuti rimasti</item>
         <item quantity="other">1 minuto rimasto</item>
     </plurals>
     <plurals name="eta_hours">
